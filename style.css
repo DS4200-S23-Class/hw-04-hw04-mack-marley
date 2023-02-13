@@ -37,7 +37,12 @@ circle {
 	stroke-width: 2;
 }
 
-circle:hover {
+.clicked {
+	fill: yellow;
+	stroke: darkblue;
+}
+
+.hovered {
 	fill: white;
 	stroke: darkred;
 }
