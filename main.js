@@ -10,9 +10,11 @@ function pointClicked(pointID) {
 
 }
 
-// var allPoints = $("svg > *");
+function newPointSubmission() {
+    let xVal = document.getElementById("select-x-coord").value;
+    let yVal = document.getElementById("select-y-coord").value;
 
-// allPoints.clicked("click", function()) {
-//     allPoints.removeClass("clicked");
-//     $(this).addClass("clicked");
-// }
+    if(!x.equals("X-Coordinate") && !yVal.equals("Y-Coordinate")) {
+        
+    }
+}
