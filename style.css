@@ -1,5 +1,6 @@
 body {
 	font-family: Arial;
+	width: 100%;
 }
 
 .centered {
@@ -18,9 +19,9 @@ body {
 }
 
 #left-column {
-	width: 864px;
+	width: 60%;
 }
 
 #right-column {
-	width: 576%;
+	width: 40%;
 }
