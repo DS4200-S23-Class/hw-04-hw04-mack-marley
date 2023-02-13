@@ -1,10 +1,18 @@
-// Select all circles in the svg and bind your data to the selection
-var circles = svg.selectAll('circle')
+function pointClicked(pointID) {
+    console.log("point was clicked.");
 
-// Determine what's new to the screen using ``.enter()`` and for each new element, append a circle
-// Then, use the data provided to set the desired attributes
-circles.enter()
-    .append('circle')
-    .attr(100, function(d) { return d.cx})
-    .attr(100, function(d) { return d.cy})
-    .attr(10, function(d){return d.r})
+    
+    let rightCol = document.getElementById("right-column");
+    rightCol.innerHTML = "Last point clicked: " + pointID;
+
+    let clickedDiv = document.getElementById(pointID);
+    clickedDiv.style.color = "blueviolet";
+
+}
+
+// var allPoints = $("svg > *");
+
+// allPoints.clicked("click", function()) {
+//     allPoints.removeClass("clicked");
+//     $(this).addClass("clicked");
+// }

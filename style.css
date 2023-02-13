@@ -41,3 +41,8 @@ circle:hover {
 	fill: white;
 	stroke: darkred;
 }
+
+.clicked {
+	stroke: blueviolet;
+	stroke-width: 3;
+}
