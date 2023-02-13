@@ -30,3 +30,14 @@ body {
 #right-column {
 	width: 40%;
 }
+
+circle {
+	fill: darkred;
+	stroke: white;
+	stroke-width: 2;
+}
+
+circle:hover {
+	fill: white;
+	stroke: darkred;
+}
