@@ -7,21 +7,21 @@ function pointClicked(pointID) {
 
 
     let clickedDiv = document.getElementById(pointID);
-    point.classList.toggle("clicked"); //This does not work.
+    clickedDiv.classList.toggle("clicked"); //This does not work.
 
 }
 
 function pointHovered(point) {
-    point.classList.toggle("hovered");
+    let currPoint = document.getElementById(point);
+    currPoint.classList.toggle("hovered");
 }
 
 function newPointSubmission() {
-    let xVal = Number(document.getElementById("select-x-coord")).value * 50;
-    let yVal = Number(document.getElementById("select-y-coord")).value * 50;
+    let xVal = Number(document.getElementById("select-x-coord").value) * 50;
+    let yVal = Number(document.getElementById("select-y-coord").value) * 50;
     let pointId = "'(" + xVal + ", " + yVal + ")'"
 
-//unfinished.
-    if(!x !== "X-Coordinate" && yVal !== "Y-Coordinate") {
+    if(x !== "X-Coordinate" && yVal !== "Y-Coordinate") {
         let scatterplot = document.getElementById("scatterplot");
         scatterplot.innerHTML("<circle id=" + pointID +
             " class='point ' cx=" + xVal + " cy=" + yVal + 
