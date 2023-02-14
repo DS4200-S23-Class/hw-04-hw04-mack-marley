@@ -11,6 +11,8 @@ function pointClicked(pointID) {
 
 }
 
+
+
 function pointHovered(point) {
     let currPoint = document.getElementById(point);
     currPoint.classList.toggle("hovered");
@@ -29,8 +31,9 @@ function newPointSubmission() {
         let scatterplot = document.getElementById("scatterplot");
         scatterplot.innerHTML += "<circle id=" + pointID +
             " class='point' cx=" + xVal + " cy=" + yVal + 
-            " r='10' onclick='pointClicked(" + pointID + 
-            ")' onmouseover='pointHovered(" + pointID + ")/>";
+            ` r='10' onclick="pointClicked(` + pointID + 
+            `)" onmouseover="pointHovered(` + pointID + 
+            `)" onmouseout="pointHovered(` + pointID + ')" />';
 
         // let recent-point = document.getElementById(pointID);
         // recent-point.addEventListener('click', click);
