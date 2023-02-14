@@ -17,16 +17,22 @@ function pointHovered(point) {
 }
 
 function newPointSubmission() {
-    let xVal = Number(document.getElementById("select-x-coord").value) * 50;
-    let yVal = Number(document.getElementById("select-y-coord").value) * 50;
-    let pointId = "'(" + xVal + ", " + yVal + ")'"
+    console.log('something');
+    let xVal = document.getElementById("select-x-coord").value;
+    let yVal = document.getElementById("select-y-coord").value;
+    let pointID = "'(" + xVal + ", " + yVal + ")'"
+    console.log(pointID);
 
-    if(x !== "X-Coordinate" && yVal !== "Y-Coordinate") {
+    if(xVal !== "X-Coordinate" && yVal !== "Y-Coordinate") {
+        xVal = Number(xVal) * 40;
+        yVal = 400 - Number(yVal) * 40;
         let scatterplot = document.getElementById("scatterplot");
-        scatterplot.innerHTML("<circle id=" + pointID +
-            " class='point ' cx=" + xVal + " cy=" + yVal + 
-            " r='10' onclick='pointClicked(" + pointID + ")/>");
+        scatterplot.innerHTML += "<circle id=" + pointID +
+            " class='point' cx=" + xVal + " cy=" + yVal + 
+            " r='10' onclick='pointClicked(" + pointID + 
+            ")' onmouseover='pointHovered(" + pointID + ")/>";
 
-
+        // let recent-point = document.getElementById(pointID);
+        // recent-point.addEventListener('click', click);
     }
 }
