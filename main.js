@@ -16,12 +16,17 @@ function pointHovered(point) {
 }
 
 function newPointSubmission() {
-    let xVal = document.getElementById("select-x-coord").value;
-    let yVal = document.getElementById("select-y-coord").value;
+    let xVal = Number(document.getElementById("select-x-coord")).value * 50;
+    let yVal = Number(document.getElementById("select-y-coord")).value * 50;
+    let pointId = "'(" + xVal + ", " + yVal + ")'"
 
 //unfinished.
-    if(!x.equals("X-Coordinate") && !yVal.equals("Y-Coordinate")) {
-        let canvas = document.getElementById('')
-        const ctx = canvas.getContext('2d');
+    if(!x !== "X-Coordinate" && yVal !== "Y-Coordinate") {
+        let scatterplot = document.getElementById("scatterplot");
+        scatterplot.innerHTML("<circle id=" + pointID +
+            " class='point ' cx=" + xVal + " cy=" + yVal + 
+            " r='10' onclick='pointClicked(" + pointID + ")/>");
+
+
     }
 }
