@@ -36,12 +36,6 @@ circle {
 	stroke: white;
 	stroke-width: 2;
 }
-
-.clicked {
-	fill: yellow;
-	stroke: darkblue;
-}
-
 .hovered {
 	fill: white;
 	stroke: darkred;

@@ -7,7 +7,7 @@ function pointClicked(pointID) {
 
 
     let clickedDiv = document.getElementById(pointID);
-    clickedDiv.classList.toggle("clicked"); //This does not work.
+    clickedDiv.classList.toggle("clicked"); 
 
 }
 
@@ -34,8 +34,5 @@ function newPointSubmission() {
             ` r='10' onclick="pointClicked(` + pointID + 
             `)" onmouseover="pointHovered(` + pointID + 
             `)" onmouseout="pointHovered(` + pointID + ')" />';
-
-        // let recent-point = document.getElementById(pointID);
-        // recent-point.addEventListener('click', click);
     }
 }
