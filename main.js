@@ -24,15 +24,13 @@ function newPointSubmission() {
     let yVal = document.getElementById("select-y-coord").value;
     let pointID = "'(" + xVal + ", " + yVal + ")'"
     console.log(pointID);
-
-    if(xVal !== "X-Coordinate" && yVal !== "Y-Coordinate") {
-        xVal = Number(xVal) * 40;
-        yVal = 400 - Number(yVal) * 40;
-        let scatterplot = document.getElementById("scatterplot");
-        scatterplot.innerHTML += "<circle id=" + pointID +
-            " class='point' cx=" + xVal + " cy=" + yVal + 
-            ` r='10' onclick="pointClicked(` + pointID + 
-            `)" onmouseover="pointHovered(` + pointID + 
-            `)" onmouseout="pointHovered(` + pointID + ')" />';
-    }
+    xVal = Number(xVal) * 40;
+    yVal = 400 - Number(yVal) * 40;
+    let scatterplot = document.getElementById("scatterplot");
+    scatterplot.innerHTML += "<circle id=" + pointID +
+        " class='point' cx=" + xVal + " cy=" + yVal + 
+        ` r='10' onclick="pointClicked(` + pointID + 
+        `)" onmouseover="pointHovered(` + pointID + 
+        `)" onmouseout="pointHovered(` + pointID + ')" />';
+    
 }
